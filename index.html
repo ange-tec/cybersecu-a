@@ -13,10 +13,10 @@
 
     if(window.opener) {
       console.log(window.opener);
-      if(msg === 'toto') {
+      /*if(msg === 'toto') {
         window.opener.postMessage({from:'child', msg:'https://www.google.com/'}, 'https://cybersecu-f.onrender.com/' )
-      }
-      else if(msg === 'Hello') {
+      }*/
+      if(msg === 'Hello') {
         window.opener.document.getElementById('parent').textContent = 'Toto';
       }
     }
