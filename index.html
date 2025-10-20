@@ -12,9 +12,7 @@
     });
 
     if(window.opener) {
-      setTimeout(() => {
-        window.opener.postMessage({}, 'https://www.google.com/')
-      }, 5000)
+      window.opener.postMessage({}, 'https://www.google.com/')
     }
   </script>
 </body>
