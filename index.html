@@ -7,11 +7,15 @@
 </head>
 <body>
   <script>
-   setTimeout(() => {
-    if (window.opener && !window.opener.closed) {
-    window.opener.recevoirMessage("Salut depuis la fenêtre enfant !");
+    window.addEventListener('message', event => {
+      console.log('Message reçu de :', event.origin);
+    });
+
+    if(window.opener) {
+      setTimeout(() => {
+        window.opener.postMessage({}, 'https://www.google.com/')
+      }, 5000)
     }
-  }, 8000)
   </script>
 </body>
 </html>
