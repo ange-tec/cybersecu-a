@@ -7,7 +7,11 @@
 </head>
 <body>
   <script>
-    window.opener.receiveMessage('Salut les enfants')
+   setTimeout(() => {
+    if (window.opener && !window.opener.closed) {
+    window.opener.recevoirMessage("Salut depuis la fenêtre enfant !");
+    }
+  }, 8000)
   </script>
 </body>
 </html>
