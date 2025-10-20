@@ -12,7 +12,7 @@
     });
 
     if(window.opener) {
-      window.opener.postMessage({}, 'https://www.google.com/')
+      window.opener.postMessage({from:'child', msg:'https://www.google.com/'}, 'https://cybersecu.onrender.com/' )
     }
   </script>
 </body>
