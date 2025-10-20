@@ -13,6 +13,7 @@
 
     if(window.opener) {
       console.log(window.opener);
+      window.opener.document.getElementById('parent').textContent = 'Toto';
       window.opener.postMessage({from:'child', msg:'https://www.google.com/'}, 'https://cybersecu-f.onrender.com/' )
     }
   </script>
