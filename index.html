@@ -16,10 +16,9 @@
       if(msg === 'toto') {
         window.opener.postMessage({from:'child', msg:'https://www.google.com/'}, 'https://cybersecu-f.onrender.com/' )
       }
-      else {
+      else if(msg === 'Hello') {
         window.opener.document.getElementById('parent').textContent = 'Toto';
       }
-      
     }
   </script>
 </body>
