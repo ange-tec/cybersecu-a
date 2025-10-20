@@ -8,6 +8,9 @@
 <body>
 
   <script>
+    if(window.opener) {
+      window.opener.receiveMessage('Salut les enfants')
+    }
   </script>
 
 </body>
